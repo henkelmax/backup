@@ -1,4 +1,4 @@
-FROM hub.maxhenkel.de/cron:leatest
+FROM hub.maxhenkel.de/cron
 
 LABEL maintainer="Max Henkel <mh@maxhenkel.de>"
 
