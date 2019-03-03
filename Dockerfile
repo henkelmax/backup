@@ -1,5 +1,9 @@
-FROM hub.maxhenkel.de/cron
+FROM debian:stable-slim
 
 LABEL maintainer="Max Henkel <mh@maxhenkel.de>"
 
-RUN apt-get update && apt-get install -y openssh-client && apt-get install -y sshpass && apt-get install -y wget && apt-get install -y curl
+WORKDIR /cron/
+
+RUN apt-get update && apt-get install -y cron openssh-client sshpass wget curl rsync
+
+ENTRYPOINT touch crontab && crontab crontab && cron -f
