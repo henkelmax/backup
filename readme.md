@@ -2,7 +2,7 @@
 
 A simple Docker container that executes cronjobs to create backups.
 
-It adds the following packets:
+It adds the following packages:
 
 - openssh-client
 - sshpass
